@@ -9,7 +9,7 @@
 int frequency = 800;
 
 void handle_sigint(int sig) {
-    const char *msg = "\n[WARNING] Carrier Interrupt Signal Received\n";
+    const char *msg = "\n[WARNING] Carrier Interrupt Signal Received, reset frequency to default safe mode(800 MHz)\n";
     write(STDOUT_FILENO, msg, strlen(msg));
     frequency = 800;
 
